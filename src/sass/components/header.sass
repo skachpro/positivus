@@ -1,0 +1,94 @@
+*
+    margin: 0
+    padding: 0
+.wrapper
+    width: 73%
+    margin: 0 auto
+.df
+    display: flex
+    justify-content: space-between
+.header
+    background: linear-gradient(-90deg, rgba(136,211,206,0.8) 0%, rgba(110,69,226,0.8) 100%), url(../img/bgi.jpg)
+    background-size: cover
+.header-menu
+    width: 90%
+    align-items: center
+    margin: 0 auto
+    padding-top: 40px
+    margin-bottom: 70px
+    &__menu
+        gap: 60px
+    &__button--primary
+        padding: 15px 30px
+        border: 1px solid #fff
+        border-radius: 30px
+        text-decoration: none
+        color: #fff
+        font-size: 12px
+        text-transform: uppercase
+        color: #ffffff
+        font-weight: 700
+        font-family: "Maven Pro"
+    &__button--primary:hover
+        background-color: rgba(255, 255, 255, 0.5 ) 
+.header_nav-menu
+    align-items: end
+    &__link
+        display: inline-block
+        font-size: 16px
+        color: #ffffff
+        font-weight: 500
+        border-bottom: 2px solid rgba(255, 255, 255, 0) 
+        text-decoration: none
+        padding: 0px 20px 15px 20px
+        transition: .3s
+    &__link:hover
+        border-bottom: 2px solid #fff 
+.heading
+    text-align: center
+    &__header--light
+        position: relative
+        font-size: 14px
+        text-transform: uppercase
+        color: #ffffff
+        font-weight: 700
+        margin-bottom: 40px
+    &__header--light::before
+        content: ""
+        position: absolute
+        width: 24px
+        height: 1px
+        background-color: #ffffff
+        top: 9px
+        left: -40px
+    &__header--light::after
+        content: ""
+        position: absolute
+        width: 24px
+        height: 1px
+        background-color: #ffffff
+        top: 9px
+        right: -40px
+    &__heading--light
+        font-size: 86px
+        color: #ffffff
+        font-weight: 500
+        margin-bottom: 40px
+    &__description--light
+        display: inline-block
+        width: 30%
+        font-size: 16px
+        line-height: 28px
+        color: #ffffff
+        font-weight: 400
+        text-align: center
+        margin-bottom: 180px
+    &__button
+        cursor: pointer
+    
+
+svg.logo 
+    width: 65px
+    height: 65px
+    margin-bottom: 40px
+

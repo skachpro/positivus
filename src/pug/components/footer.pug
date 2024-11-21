@@ -1,0 +1,21 @@
+//- Footer for all pages
+include ../helpers/mixins
+footer.footer
+    +menu("logo-dark.png", "footer", "#", "footer-menu__button--secondary")
+
+    hr.footer-line
+    .footer-bottom 
+        p.footer-bottom__copyright &copy; 2017 Mass Impressions & Tranmautritam. Make the right impression.
+        .icons
+            a.icon(href='#')
+                svg
+                    use(xlink:href="#mdi--instagram")
+            a.icon(href="#") 
+                svg
+                    use(xlink:href="#mdi--twitter")
+            a.icon(href="#") 
+                svg
+                    use(xlink:href="#basil--facebook-solid")
+            a.icon(href="#") 
+                svg
+                    use(xlink:href="#mdi--google-plus")

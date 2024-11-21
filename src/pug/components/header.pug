@@ -1,0 +1,30 @@
+//- Header for all pages
+include ../helpers/mixins
+header.header
+    //- div(class="header-menu df")
+    //-     .header-menu__logo
+    //-         img(src="../img/logo.svg", alt="Logo of MISOCIAL")
+    //-     div(class="header-menu__menu df")
+    //-         nav(class="nav-menu df")
+    //-             a.nav-menu__link(href="#") Home
+    //-             a.nav-menu__link(href="#") Why MISOCIAL 
+    //-             a.nav-menu__link(href="#") Features
+    //-             a.nav-menu__link(href="#") Articles
+    //-             a.nav-menu__link(href="#") Pricing
+    //-         a.header-menu__button(href="#") get started
+    +menu("logo.png", "header", "#", "header-menu__button--primary")
+
+    //- div(class="heading wrapper")
+    //-     b.heading__header SOCIAL MARKETING & ANALYTICS
+    //-     h1.heading__heading Pricing Table
+    //-     p.heading__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut... 
+    //-     .heading__button
+    //-         svg(class='logo' viewBox="0 0 65 65" xmlns="http://www.w3.org/2000/svg")
+    //-             circle(fill="#fff" cx="32.5" cy="32.5" r="30") 
+    //-             polyline(
+    //-                 points="33,20 33,46 20,35 33,46 44,35 33,46"
+    //-                 stroke="#9fa4af"
+    //-                 stroke-width="2"
+    //-                 fill="none"
+    //-             )
+    +heading("True", class_name="heading",theme="light","SOCIAL MARKETING & ANALYTICS", "Pricing Table")

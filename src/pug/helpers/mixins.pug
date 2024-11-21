@@ -1,0 +1,39 @@
+//- Mixins
+//- ТЕМИ для Меню
+mixin menu(logo='logo.png', place_of='header', href_btn='#', buttonClass='')
+    div(class=place_of + "-menu df")
+        div(class=place_of + "-menu__logo")
+            img(src="../img/" + logo, alt="Logo of MISOCIAL")
+        div(class=place_of + "-menu__menu df")
+            nav(class=place_of + "_nav-menu df")
+                a(class=place_of+"_nav-menu__link" href="#") Home
+                a(class=place_of+"_nav-menu__link" href="#") Why MISOCIAL
+                a(class=place_of+"_nav-menu__link" href="#") Features
+                a(class=place_of+"_nav-menu__link" href="#") Articles
+                a(class=place_of+"_nav-menu__link" href="#") Pricing
+            a(class="header-menu__button " + buttonClass href="" + href_btn) Get Started
+mixin heading(button_scroll="False", class_name="heading",theme="light",header="", heading="", description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut...")
+    div(class=class_name + " wrapper")
+        b(class=class_name + "__header--" + theme) #{header}
+        h1(class=class_name + "__heading--" + theme) #{heading}
+        p(class=class_name + "__description--" + theme) #{description}
+        
+        if button_scroll == "True"
+            div(class=class_name + "__button")
+                
+mixin button(btn_text="button",url="#",active="True")
+    a(class="button" href=""+url) #{btn_text}
+
+
+mixin card(img="",img_alt="", format="personal", price="0", period="month", about="Lorem ipsum dolor sit amet.sed do eiusmod tempor incididunt ut.Labore et dolore magna aliqua.quis nostrud exercitation ullamco laboris.Ea commodo consequat.",butn_text="button",link="#",btn_active="True")
+    figure(class="card")
+        img(class="card__image" src="../img/" + img, alt=""+img_alt)
+        figcaption(class="card-figcaption")
+            b(class="card-figcaption__heading") #{format}
+            p.card-figcaption__price
+                
+                sup.card-figcaption__dolar $ 
+                span.card-figcaption__numbers #{price}
+                span.card-figcaption__period /#{period}
+            p(class='card-figcaption__about') #{about}
+            +button(butn_text,link,btn_active)

@@ -1,0 +1,22 @@
+//- Homepage
+extends templates/layout 
+
+block seo 
+    //- SEO content
+
+block content 
+    +heading("False","heading","dark" ,"MIsocial", "Select a Plan","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.")
+    .cards.wrapper
+        a(class="cards__card-box" href="#") 
+            +card("maxx.jpg","","personal","0","month","Lorem ipsum dolor sit amet.sed do eiusmod tempor incididunt ut.Labore et dolore magna aliqua.quis nostrud exercitation ullamco laboris.Ea commodo consequat.","select plan","#","True")
+        a(class="cards__card-box" href="") 
+            +card("moon_walker.jpg","","personal","29","month","Lorem ipsum dolor sit amet.sed do eiusmod tempor incididunt ut.Labore et dolore magna aliqua.quis nostrud exercitation ullamco laboris.Ea commodo consequat.","select plan","#","True")
+        a(class="cards__card-box" href="") 
+            +card("rocket.jpg","","personal","49","month","Lorem ipsum dolor sit amet.sed do eiusmod tempor incididunt ut.Labore et dolore magna aliqua.quis nostrud exercitation ullamco laboris.Ea commodo consequat.","select plan","#","True")
+    .CtA 
+        .CtA-content
+            b.CtA-content__class SOCAL MARKETING & ANALYTICS
+            h2.CtA-content__heading Take control of your data
+            .CtA-content__buttons 
+                +button("get started","#","True")
+                +button("explore features","#","True")
