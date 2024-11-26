@@ -7,19 +7,21 @@ body
     font-size: 14rem
     font-family: maven pro
 
-.flex
-    display: flex 
-
+.df
+    display: flex
+    justify-content: space-between
+.wrapper
+    max-width: 73%
+    margin: 0 auto
 .j-center 
     justify-content: center
 .j-between 
     justify-content: space-between
 .a-center 
     align-items: center
-.wrapper 
-    width: 90%
-    margin: 0 auto
 
+.hidden
+    display: none
 .main
     background-color: #f9fafc
 
@@ -66,6 +68,23 @@ body
         color: #9fa4af
         font-weight: 400
         margin-bottom: 100px
+.header__button
+    display: flex
+    justify-content: center
+    &-scrole
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 64px
+        height: 64px
+        background-color: #fff
+        border-radius: 100px
+        margin-bottom: 50px
+        svg
+            
+            stroke: #bcbcba
+            width: 35px
+            height: 30px
 .cards
     display: flex
     justify-content: space-between
@@ -99,11 +118,17 @@ body
         &__price
             color: #4f4f6f
             margin-bottom: 45px
-        &__dolar
-            font-size: 16px
-            font-weight: 500
         &__numbers
+            position: relative
+            padding-left: 20px
             font-size: 60px
+            font-weight: 500
+        &__numbers::before
+            content: "$"
+            position: absolute
+            left: 5px
+            top: 10px
+            font-size: 16px
             font-weight: 500
         &__period
             font-size: 16px
@@ -138,8 +163,9 @@ body
     color: #fff
 
 .CtA
-    background: linear-gradient(-90deg, rgba(136,211,206,0.7) 0%, rgba(110,69,226,0.8) 100%), url(../img/Map.jpg)
+    background: linear-gradient(-90deg, rgba(136,211,206,0.7) 0%, rgba(110,69,226,0.9) 100%), url(../img/Map.jpg)
     background-size: cover
+    min-height: 530px
     &-content
         width: 73%
         padding: 180px 0
