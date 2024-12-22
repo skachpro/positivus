@@ -5,186 +5,56 @@ html
     font-size: 1px
 body
     font-size: 14rem
-    font-family: maven pro
-
-.df
-    display: flex
-    justify-content: space-between
+    font-family: "Space Grotesk", serif
+*
+    padding: 0
+    margin: 0
+    
 .wrapper
-    max-width: 73%
-    margin: 0 auto
-.j-center 
-    justify-content: center
-.j-between 
-    justify-content: space-between
-.a-center 
-    align-items: center
-
-.hidden
-    display: none
-.main
-    background-color: #f9fafc
-
-@import components/header
-
-// Main styles hear
-.heading
-    padding-top: 120px
-    text-align: center
-    &__header--dark
-        position: relative
-        font-size: 14px
-        text-transform: uppercase
-        color: #9fa4af
-        font-weight: 700
-        margin-bottom: 20px
-    &__header--dark::before
-        content: ""
-        position: absolute
-        width: 24px
-        height: 1px
-        background-color: #6e45e2
-        top: 9px
-        left: -40px
-    &__header--dark::after
-        content: ""
-        position: absolute
-        width: 24px
-        height: 1px
-        background-color: #6e45e2
-        top: 9px
-        right: -40px
-    &__heading--dark
-        font-size: 60px
-        letter-spacing: -2px
-        font-weight: 500
-        color: #4f4f6f
-        margin-bottom: 30px
-    &__description--dark
-        display: inline-block
-        width: 30%
-        font-size: 16px
-        line-height: 28px
-        color: #9fa4af
-        font-weight: 400
-        margin-bottom: 100px
-.header__button
-    display: flex
-    justify-content: center
-    &-scrole
-        display: flex
-        justify-content: center
-        align-items: center
-        width: 64px
-        height: 64px
-        background-color: #fff
-        border-radius: 100px
-        margin-bottom: 50px
-        svg
-            
-            stroke: #bcbcba
-            width: 35px
-            height: 30px
-.cards
-    display: flex
-    justify-content: space-between
-    &__card-box
-        text-decoration: none
-        cursor: default
-.card
-    display: flex
-    flex-direction: column
-    text-align: center
-    max-width: 30%
-    padding: 60px 0px
-    border-radius: 30px
-    border: 1px solid #d7dbe8
-    background: #fff
-    margin-bottom: 120px
-    transition: .5s
-    &__image
-        width: 108px
-        height: 94px
-        margin: 0 auto
-        margin-bottom: 60px
-    &-figcaption
-        display: flex
-        flex-direction: column
-        &__heading
-            text-transform: uppercase
-            color: #9fa4af
-            font-weight: 700
-            margin-bottom: 25px
-        &__price
-            color: #4f4f6f
-            margin-bottom: 45px
-        &__numbers
-            position: relative
-            padding-left: 20px
-            font-size: 60px
-            font-weight: 500
-        &__numbers::before
-            content: "$"
-            position: absolute
-            left: 5px
-            top: 10px
-            font-size: 16px
-            font-weight: 500
-        &__period
-            font-size: 16px
-            font-weight: 500
-        &__about
-            font-size: 16px
-            line-height: 28px
-            color: #9fa4af
-            font-weight: 400
-            width: 70%
-            margin: 0 auto
-            margin-bottom: 60px
-.card:hover
-    filter: drop-shadow(0 0 46px rgba(204,204,223,0.71))
+    width: 100%
+    padding: 0px 10px
+    +media(560)
+        width: 85%
+        text-align: center
+        margin: auto
+a
+    text-decoration: none
+.link:hover
+    border-bottom: 1px solid #000
+.db
+    display: block !important
+.hpb-heading
+    color: $text-color
+.hpb-paragraph
+    line-height: 28px
 .button
     display: inline-block
-    text-align: center
-    width: 190px
-    padding: 20px 0
-    border-radius: 35px
-    margin: 0 auto
-    filter: drop-shadow(0 0 10.5px rgba(204,204,223,0.5))
-    background-color: #ffffff
-    font-size: 12px
-    text-transform: uppercase
-    color: #c2c9db
-    font-weight: 700
-    text-decoration: none
+    font-size: 20rem
+    background: linear-gradient(90deg, $header-button-bg 0%,$header-button-bg 50%, $button-bg 50%, $button-bg 100%)
+    background-size: 200%
+    background-position: 100% 0
+    padding: 20px 35px
+    color: $header-button-hover-text-color
+    border: 1px solid $button-bg
+    line-height: 28px
+    border-radius: 14px
     transition: .3s
-.button:hover
-    background-color: #6e45e2
-    color: #fff
-
-.CtA
-    background: linear-gradient(-90deg, rgba(136,211,206,0.7) 0%, rgba(110,69,226,0.9) 100%), url(../img/Map.jpg)
-    background-size: cover
-    min-height: 530px
-    &-content
-        width: 73%
-        padding: 180px 0
-        text-align: center
-        margin: 0 auto
-        &__class
-            text-transform: uppercase
-            color: #ffffff
-            margin-bottom: 25px
-        &__heading
-            font-size: 60px
-            color: #ffffff
+    &:hover
+        color: $text-color
+        background-position: 0 0
+@import components/header
+.main
+    padding-top: 140px
+    &-section-heading
+        +flex("start","center","wrap")
+            gap: 40px
+        &-head 
+            font-size: 40rem
+            padding: 3px 10px
             font-weight: 500
-            margin-bottom: 30px
-        &__buttons
-            display: flex
-            justify-content: center
-            gap: 10px
-    .button
-        filter: none
-        margin: 0
+            border-radius: 10px
+            background: $green
+            &-about 
+                font-size: 18rem
+                text-align: left
 @import components/footer

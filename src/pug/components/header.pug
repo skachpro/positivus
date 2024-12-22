@@ -1,10 +1,42 @@
 //- Header for all pages
 include ../helpers/mixins
 header.header
-    .header-content.wrapper
-        +menu("logo.png", "header", "#", "header-menu__button--primary")
-        +heading("heading","light","SOCIAL MARKETING & ANALYTICS","Pricing Table")
-        .header__button
-            a.header__button-scrole
-                svg
-                    use(xlink:href="#arrow")
+    //-header
+    .header-menu 
+        .logo 
+            img.logo-img(src="img/logo.svg", alt="Logo Positivus")
+        .header-menu-burger-menu
+            .header-menu-burger-menu__button
+                svg 
+                    use(xlink:href="#iconamoon--menu-burger-horizontal-bold")
+            .header-menu-burger-menu__content
+                button.header-menu-burger-menu__button--close
+                .header-menu-content
+                    nav.header-menu-content-nav-menu
+                        a.header-menu-content-nav-menu__link.link(href="#") Services
+                        a.header-menu-content-nav-menu__link.link(href="#") About us
+                        a.header-menu-content-nav-menu__link.link(href="#") Use Cases
+                        a.header-menu-content-nav-menu__link.link(href="#") Pricing
+                        a.header-menu-content-nav-menu__link.link(href="#") Blog
+                    a.header-menu__button(href="#") Request a quote
+        .header-menu-content
+            nav.header-menu-content-nav-menu
+                a.header-menu-content-nav-menu__link.link(href="#") Services
+                a.header-menu-content-nav-menu__link.link(href="#") About us
+                a.header-menu-content-nav-menu__link.link(href="#") Use Cases
+                a.header-menu-content-nav-menu__link.link(href="#") Pricing
+                a.header-menu-content-nav-menu__link.link(href="#") Blog
+            a.header-menu__button(href="#") Request a quote
+    .header-main
+        .header-content 
+            +heading_paragraph_button("header-content","h1","Navigating the digital landscape for success","Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.","Book a consultation","yes")
+        .header-main-illustration
+            img.header-main-illustration-img.ill-bl(src="img/header_illustration.png", alt="")
+    .header-slider 
+        .header-slider-slide-row 
+            img.header-slider-slide-row-slide(src="img/amazon.png", alt="")
+            img.header-slider-slide-row-slide(src="img/dribble.png", alt="")
+            img.header-slider-slide-row-slide(src="img/hubspot.png", alt="")
+            img.header-slider-slide-row-slide(src="img/notion.png", alt="")
+            img.header-slider-slide-row-slide(src="img/netflix.png", alt="")
+            img.header-slider-slide-row-slide(src="img/zoom.png", alt="")

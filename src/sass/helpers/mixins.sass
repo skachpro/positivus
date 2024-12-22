@@ -1,6 +1,10 @@
 @mixin flex($jc: "start",$aic: "start", $fwrw: "start")
+    display: flex
     justify-content: $jc
     align-items: $aic
     flex-wrap: $fwrw
     @content
 
+=media($size)
+    @media screen and (min-width: #{$size}px) 
+        @content

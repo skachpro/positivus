@@ -1,103 +1,142 @@
-*
-    margin: 0
-    padding: 0
-
-.df
-    display: flex
-    justify-content: space-between
+@keyframes scroll
+    from
+        transform: translateX(0)
+    to 
+        transform: translateX(-65%)
 .header
-    background: linear-gradient(-90deg, rgba(136,211,206,0.8) 0%, rgba(110,69,226,0.8) 100%), url(../img/bgi.jpg)
-    background-size: cover
-    background-position: center
-.header-menu
+    padding-top: 20px
+    +media(768)
+        padding-top: 60px
+    &-menu  
+        +flex("space-between","center","wrap")
+            gap: 20px
+        +media(450)
+            gap: 40px
+        margin-bottom: 70px
+        &-burger-menu
+            
+            &__content
+                display: none
+                position: relative
+                position: fixed
+                left: 0
+                top: 0
+                //background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%,rgba(185,255,102,0.9) 50%, rgba(185,255,102,1) 100%)
+                background: rgba(185,255,102,0.9)
+                backdrop-filter: blur(5px)
+                padding-top: 65px
+                width: 100%
+                height: 100%
+            &__button
+                +media(1305)
+                    display: none
+                width: 45px
+                height: 45px
+            &__button--close
+                position: absolute
+                left: 20px
+                top: 20px
+                width: 45px
+                height: 45px
+            svg
+                width: 45px
+                height: 45px
+        
+        &-content
+            +flex("space-between","center","wrap")
+                flex-direction: column
+                +media(1305)
+                    flex-direction: row
+                gap: 40px
+            font-size: 20rem
+            &-nav-menu
+                +flex("start","center","wrap")
+                    flex-direction: column
+                    +media(1305)
+                        flex-direction: row
+                    gap: 40px
+                    &__link
+                        color: $text-color
+        &>&-content
+            display: none
+            +media(1305)
+                +flex("space-between","center","wrap")
+                    gap: 40px
+                font-size: 20rem
+                &-nav-menu
+                    +flex("space-between","center","wrap")
+                        gap: 40px
+                        &__link
+                            color: $text-color
+        &__button
+            padding: 20px 35px
+            color: $text-color
+            border: 1px solid #000
+            background: linear-gradient(90deg, $header-button-bg 0%, $header-button-bg 50%, $header-button-hover-bg 50%)
+            background-size: 200%
+            background-position: 0% 0
+            border-radius: 14px
+            transition: .3s
+            &:hover
+                background-position: 100% 0
+                color: $header-button-hover-text-color
+    &-main
+        +flex("space-between","start","wrap")
+            gap: 20px
+        +media(768)
+            flex-wrap: nowrap
+        margin-bottom: 70px
+        &-illustration
+            // display: none
+            // +media(1024)
+            //     display: block
+            flex-shrink: 1
+            &-img 
+                max-width: 100%
+                height: 100%
+    &-content
+        text-align: left
+        &>*
+            margin-bottom: 35px
+        &>.hpb-paragraph
+            font-size: 20rem
+            max-width: 500px
+    &-slider 
+        display: flex
+        gap: 60px
+        
+        overflow: hidden
+        white-space: nowrap
+        &:hover .header-slider-slide-row 
+            animation-play-state: paused
+        &-slide-row
+            +flex("start",'center','nowrap')
+            //max-width: 1224px
+            gap: 100px
+            white-space: nowrap
+            animation: scroll 25s infinite linear
+            &-slide
+                display: flex
+                align-items: center
+                white-space: nowrap
+                filter: brightness(0)
+                height: 48px
+            
+.ill-mix
+    display: block
+    +media(1024)
+        display: none
+.ill-bl
+    display: none
+    +media(1024)
+        display: block
+.logo 
+    display: flex
     align-items: center
-    margin: 0 auto
-    padding-top: 40px
-    margin-bottom: 70px
-    &__menu
-        gap: 30px
-    &__button--primary
-        padding: 15px 30px
-        border: 1px solid #fff
-        border-radius: 30px
-        text-decoration: none
-        color: #fff
-        font-size: 12px
-        text-transform: uppercase
-        color: #ffffff
-        font-weight: 700
-        font-family: "Maven Pro"
-    &__button--primary:hover
-        background-color: rgba(255, 255, 255, 0.5 ) 
-.header_nav-menu
-    align-items: end
-    &__link
-        display: inline-block
-        position: relative
-        font-size: 16px
-        color: #ffffff
-        font-weight: 500
-        border-bottom: 2px solid rgba(255, 255, 255, 0) 
-        text-decoration: none
-        padding: 0px 20px 15px 20px
-        transition: .3s
-    &__link::before
-        content: ''
-        position: absolute
-        top: 30px
-        left: 0
+    &-img 
         width: 100%
-        height: 2px
-        background-color: #fff
-        transform: scale(0)
-        transition: .5s
-    &__link:hover::before
-        transform: scale(1)
-.heading
-    text-align: center
-    &__header--light
-        position: relative
-        font-size: 14px
-        text-transform: uppercase
-        color: #ffffff
-        font-weight: 700
-        margin-bottom: 40px
-    &__header--light::before
-        content: ""
-        position: absolute
-        width: 24px
-        height: 1px
-        background-color: #ffffff
-        top: 9px
-        left: -40px
-    &__header--light::after
-        content: ""
-        position: absolute
-        width: 24px
-        height: 1px
-        background-color: #ffffff
-        top: 9px
-        right: -40px
-    &__heading--light
-        font-size: 86px
-        color: #ffffff
-        font-weight: 500
-        margin-bottom: 40px
-    &__description--light
-        display: inline-block
-        width: 30%
-        font-size: 16px
-        line-height: 28px
-        color: #ffffff
-        font-weight: 400
-        text-align: center
-        margin-bottom: 180px
-    &__button
-        cursor: pointer
-    
-
-svg.logo 
-    width: 65px
-    height: 65px
-    margin-bottom: 40px
-
+        height: 100%
+h1
+    font-size: 60rem !important
+    font-weight: 500
+    max-width: 530px
