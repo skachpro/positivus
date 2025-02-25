@@ -16,3 +16,38 @@ mixin section-heading($heading="",$about="")
     .main-section-heading
         h2.main-section-heading-head !{$heading}
         p.main-section-heading-head-about !{$about}
+mixin services_card($heading="",$img_url="",$theme='grey')
+    if $theme == 'grey'
+        figure.services-card-figure.services-card-figure-grey
+            .services-card-figure-card-photo
+                img(class='services-card-figure-card' src=""+$img_url alt="")
+            figcaption.services-card-figcaption 
+                p.services-card-figcaption__heading.dib !{$heading}
+                .services-card-figcaption-learn-more 
+                    span.services-card-figcaption-learn-more-icon 
+                        svg.services-card-figcaption-learn-more-icon-svg
+                            use(xlink:href="#services-arrow")
+                    p.services-card-figcaption-learn-more-text Learn more
+                    
+    else if $theme == 'dark'
+        figure.services-card-figure.services-card-figure-dark
+            .services-card-figure-card-photo
+                img(class='services-card-figure-card' src=""+$img_url alt="")
+            figcaption.services-card-figcaption 
+                p.services-card-figcaption__heading.dib !{$heading}
+                .services-card-figcaption-learn-more 
+                    span.services-card-figcaption-learn-more-icon.services-card-figcaption-learn-more-icon-dark
+                        svg.services-card-figcaption-learn-more-icon-svg
+                            use(xlink:href="#dark-arrow")
+                    p.services-card-figcaption-learn-more-text.services-card-figcaption-learn-more-text-dark Learn more
+    else if $theme == 'green'
+        figure.services-card-figure.services-card-figure-green
+            .services-card-figure-card-photo
+                img(class='services-card-figure-card' src=""+$img_url alt="")
+            figcaption.services-card-figcaption 
+                p.services-card-figcaption__heading.dib !{$heading}
+                .services-card-figcaption-learn-more
+                    span.services-card-figcaption-learn-more-icon 
+                        svg.services-card-figcaption-learn-more-icon-svg
+                            use(xlink:href="#services-arrow")
+                    p.services-card-figcaption-learn-more-text Learn more

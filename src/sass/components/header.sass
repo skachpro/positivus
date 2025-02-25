@@ -1,8 +1,4 @@
-@keyframes scroll
-    from
-        transform: translateX(0)
-    to 
-        transform: translateX(-65%)
+
 .header
     padding-top: 20px
     +media(768)
@@ -100,7 +96,6 @@
             margin-bottom: 35px
         &>.hpb-paragraph
             font-size: 20rem
-            max-width: 500px
     &-slider 
         display: flex
         gap: 60px
@@ -110,11 +105,10 @@
         &:hover .header-slider-slide-row 
             animation-play-state: paused
         &-slide-row
-            +flex("start",'center','nowrap')
-            //max-width: 1224px
-            gap: 100px
-            white-space: nowrap
-            animation: scroll 25s infinite linear
+            +flex("space-between",'center','wrap')
+            gap: 20px
+            width: 100%
+            //max-width: 1224p
             &-slide
                 display: flex
                 align-items: center

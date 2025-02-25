@@ -11,6 +11,3 @@ Burger_Close_Btn.onclick = function(){
     console.log(2)
     Burger_window.classList.remove("db")
 }
-
-var copy = document.querySelector(".header-slider-slide-row").cloneNode(true);
-document.querySelector(".header-slider").appendChild(copy);
