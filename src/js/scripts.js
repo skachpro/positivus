@@ -11,3 +11,10 @@ Burger_Close_Btn.onclick = function(){
     console.log(2)
     Burger_window.classList.remove("db")
 }
+
+
+document.addEventListener("click", function(event) {
+    if (event.target.closest(".services-card-figcaption-learn-more")) {
+        window.location.href = "#";
+    }
+});
