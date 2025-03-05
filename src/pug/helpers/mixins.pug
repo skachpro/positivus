@@ -51,3 +51,11 @@ mixin services_card($heading="",$img_url="",$theme='grey')
                         svg.services-card-figcaption-learn-more-icon-svg
                             use(xlink:href="#services-arrow")
                     p.services-card-figcaption-learn-more-text Learn more
+mixin case-studies($text="")
+    figure.case-studies-figure 
+        figcaption.case-studies-figcaption 
+            p.case-studies-figcaption-text !{$text}
+            .case-studies-figcaption-lm
+                p.case-studies-figcaption-lm-text Learn more
+                svg.case-studies-figcaption-lm-icon
+                    use(xlink:href="#services-arrow")

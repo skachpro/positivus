@@ -18,3 +18,9 @@ document.addEventListener("click", function(event) {
         window.location.href = "#";
     }
 });
+
+document.addEventListener("click", function(event) {
+    if (event.target.closest(".case-studies-figcaption-lm")) {
+        window.location.href = "#";
+    }
+});

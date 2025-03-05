@@ -56,9 +56,11 @@ a
 .main
     padding-top: 140px
     &-section-heading
-        +flex("start","center","wrap")
-            gap: 40px
-            padding-bottom: 80px
+        +flex("center","center","wrap")
+        +media(1024)
+            justify-content: start
+        gap: 40px
+        padding-bottom: 80px
         &-head 
             font-size: 40rem
             padding: 3px 10px
@@ -67,7 +69,9 @@ a
             background: $green
             &-about 
                 font-size: 18rem
-                text-align: left
+                text-align: center
+                +media(1024)
+                    text-align: left
 .services-cards
     display: flex
     justify-content: space-between
@@ -214,4 +218,90 @@ a
             width: 100%
             +media(625)
                 width: 45.5%
+.case-studies
+    &::-webkit-scrollbar 
+        display: none
+    +flex("space-between","center")
+    position: relative
+    width: 100%
+    margin: 0
+    overflow-x: auto
+    margin-bottom: 20px
+    background-color: none
+    gap: 20px
+    +media(950)
+        width: auto
+        overflow-x: hidden
+        padding: 70px 60px
+        background-color: $button-bg
+        border-radius: 45px
+        gap: 20px
+    &-figure
+        
+        background-color: $button-bg
+        padding: 40px
+        min-width: 320px
+        +media(425)
+            min-width: 350px
+        height: 220px
+        /* overflow-x: auto */
+        border-radius: 45px
+        box-sizing: border-box
+        +media(950)
+            background: none
+            /* overflow-x: hidden */
+            padding: 0
+            border-radius: 0
+            min-width: auto
+            height: auto
+    &-line
+        display: none
+        +media(1120)
+            display: block
+        position: relative
+        width: 70px
+        +media(800)
+            width: 128px
+        & hr
+            position: absolute
+            appearance: none
+            border: none 
+            border-right: 1px solid #fff
+            width: 1px
+            height: 168px
+            left: 50%
+            top: 0
+            transform: translate(-50%,-50%)
+    &-figcaption
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        width: 100%
+        height: 100%
+        +media(768)
+            display: block
+        +media(1440)
+            width: 81%
+        &-text
+            color: #fff
+            margin-bottom: 20px
+            max-width: 286px
+
+        &-lm 
+            display: flex
+            align-items: end
+            &-text
+                display: inline-block
+                font-size: 16rem
+                +media(1024)
+                    font-size: 20rem
+                color: $green
+                margin-right: 15px
+            &-icon 
+                width: 20px
+                height: 20px
+                +media(768)
+                    width: 25px
+                    height: 25px
+    
 @import components/footer
