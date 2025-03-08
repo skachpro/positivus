@@ -59,3 +59,11 @@ mixin case-studies($text="")
                 p.case-studies-figcaption-lm-text Learn more
                 svg.case-studies-figcaption-lm-icon
                     use(xlink:href="#services-arrow")
+mixin accordion($number="0"+$i,$name="",$about="During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.")
+    button.accordion-item
+        .accordion-item-label
+            .accordion-item-label-heading
+                p.accordion-item-label-heading-number !{$number}
+                p.accordion-item-label-heading-text !{$name}
+            .accordion-item-label-plus
+        p.accordion-item-about !{$about}

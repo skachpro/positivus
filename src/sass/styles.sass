@@ -28,6 +28,7 @@ a
     display: block !important
 .dib
     display: inline-block !important
+.active
 .hpb-heading
     color: $text-color
 .hpb-paragraph
@@ -226,7 +227,7 @@ a
     width: 100%
     margin: 0
     overflow-x: auto
-    margin-bottom: 20px
+    margin-bottom: 140px
     background-color: none
     gap: 20px
     +media(950)
@@ -303,5 +304,68 @@ a
                 +media(768)
                     width: 25px
                     height: 25px
-    
+.owp
+    &-accordion
+        display: flex
+        flex-direction: column
+        gap: 20px
+.accordion-item
+    appearance: none
+    text-align-last: left
+    background-color: $grey
+    padding: 41px 60px 0px 60px
+    border-radius: 45px
+    border: 1px solid #000
+    font-family: "Space Grotesk"
+    cursor: pointer
+    &-label 
+        +flex("space-between","center")
+        padding-bottom: 40px 
+        &-plus
+            position: relative
+            width: 58px
+            height: 58px
+            border: 1px solid #000
+            border-radius: 50px
+            background-color: $grey
+            &::before 
+                content: ""
+                position: absolute
+                width: 18px
+                height: 6px
+                background-color: #000
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-50%)
+            &::after
+                content: ""
+                position: absolute
+                width: 6px
+                height: 18px
+                background-color: #000
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-50%)
+                transition: .1s
+        &-heading 
+            +flex("space-between","center")
+            gap: 25px
+            &-number
+                font-size: 60rem
+                font-weight: 500
+                
+            &-text
+                font-size: 30rem
+                font-weight: 500
+    &-about 
+        display: none
+        padding: 40px 0 41px 0
+.accordion-item.db
+    background-color: $green
+    & .accordion-item-label
+        border-bottom: 1px solid #000
+.accordion-item-label.active .accordion-item-label-plus::after
+    top: calc( 50% - 9px )
+    left: calc( 50% - 3px )
+    transform: rotate(90deg)
 @import components/footer

@@ -24,3 +24,14 @@ document.addEventListener("click", function(event) {
         window.location.href = "#";
     }
 });
+
+document.querySelectorAll(".accordion-item").forEach((accordItem) => {
+    const accordAbout = accordItem.querySelector(".accordion-item-about");
+    const accordPlus = accordItem.querySelector(".accordion-item-label");
+
+    accordItem.addEventListener("click", () => {
+        accordAbout.classList.toggle("db");
+        accordItem.classList.toggle("db");
+        accordPlus.classList.toggle("active");
+    });
+});
