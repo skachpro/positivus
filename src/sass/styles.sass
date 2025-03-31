@@ -29,7 +29,11 @@ a
     display: block !important
 .dib
     display: inline-block !important
-.active
+.inactive-arrow
+    filter: brightness(50%) !important
+    border: 1px solid rgba(255,255,255,1) 
+    background-color: rgba(255,255,255,0.3) 
+    cursor: auto
 .hpb-heading
     color: $text-color
 .hpb-paragraph
@@ -298,6 +302,7 @@ a
         &-lm 
             display: flex
             align-items: end
+            cursor: pointer
             &-text
                 display: inline-block
                 font-size: 16rem
@@ -399,4 +404,76 @@ a
         top: calc( 50% - 9px )
         left: calc( 50% - 3px )
     transform: rotate(90deg)
+.team-member-photo
+    
+    background-color: rgba(185, 255, 102, 1)
+    background-image: url("../img/team_man.jpg")
+    background-blend-mode: multiply
+    width: 150px
+    height: 150px
+    background-size: cover
+.tesmonials
+    &-comments
+        background-color: $button-bg
+        padding: 60px 0 40px 0
+        border-radius: 45px
+        &-items
+            +flex("","center")
+            overflow: hidden 
+            height: auto
+            margin-bottom: 80px
+            &-item 
+                padding: 0 50px 0 50px
+                &:nth-child(1)
+                    box-sizing: border-box
+                &-comment 
+                    position: relative
+                    padding: 50px
+                    width: 600px
+                    height: 200px
+                    box-sizing: border-box
+                    border: 1px solid $green
+                    border-radius: 45px
+                    color: #fff
+                    margin-bottom: 50px
+                    &::after
+                        content: ""
+                        position: absolute
+                        bottom: -24px
+                        left: 60px
+                        width: 45px
+                        height: 45px
+                        border-left: 1px solid $green
+                        border-bottom: 1px solid $green
+                        background-color: $button-bg
+                        transform: rotate(-45deg)
+                &-avtor 
+                    & div
+                        display: inline-block
+                        padding-left: 80px
+                    &-name
+                        font-size: 20rem
+                        font-weight: 500
+                        color: $green
+                    &-position
+                        font-size: 18rem
+                        color: #fff
+    &-arrows
+        display: flex
+        justify-content: center
+        gap: 50px
+        & svg
+            box-sizing: border-box
+            width: 45px
+            height: 45px
+            padding: 10px
+            border: 1px solid rgba(255,255,255,0)
+            border-radius: 50px
+            cursor: pointer
+            transition: .3s
+            &:hover
+                border: 1px solid rgba(255,255,255,1)
+        &-left-button
+            filter: brightness(100%)
+            transform: rotate(180deg)
 @import components/footer

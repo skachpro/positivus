@@ -67,3 +67,10 @@ mixin accordion($number="0"+$i,$name="",$about="During the initial consultation,
                 p.accordion-item-label-heading-text !{$name}
             .accordion-item-label-plus
         p.accordion-item-about !{$about}
+mixin comments($avtor="John Smith",$position="Marketing Director at XYZ Corp",$comment='"We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."')
+    .tesmonials-comments-items-item
+        p.tesmonials-comments-items-item-comment !{$comment}
+        .tesmonials-comments-items-item-avtor
+            div
+                p.tesmonials-comments-items-item-avtor-name !{$avtor}
+                p.tesmonials-comments-items-item-avtor-position !{$position}

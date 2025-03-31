@@ -44,3 +44,23 @@ block content
         .owp-accordion
             - for (let i = 1; i <= 6; i++)
                 +accordion((i < 10 ? '0' + i : i),"Consultation")
+    .testimonials 
+        +section-heading("Testimonials","Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services")
+        .tesmonials-comments 
+            .tesmonials-comments-items
+                +comments("Emily Johnson","Head of E-commerce at ABC Retail","Working with Positivus has been a game-changer for our online store. Their strategic approach and expertise have helped us increase our conversion rates and overall revenue. The team is knowledgeable, dedicated, and always available to support us. We highly recommend Positivus to anyone looking to scale their digital business.")
+                +comments()
+                +comments("Michael Thompson","CEO of TechNova Solutions","Positivus has been an invaluable partner in our digital marketing strategy. Thanks to their innovative campaigns and SEO efforts, we've seen a remarkable boost in brand visibility and customer engagement. Their professionalism and commitment make them stand out. I wouldn't hesitate to recommend them to any business seeking growth.")
+                +comments("Sarah Williams","CMO at GreenLeaf Organics","Since partnering with Positivus, we've seen a dramatic improvement in our online reach and customer interactions. Their data-driven strategies and creative approach have helped us build a strong digital presence. The team is exceptional, always proactive and results-oriented. We strongly recommend their services!")
+                +comments("David Miller","Founder of Miller Financial Group","Positivus has exceeded our expectations in every way. Their targeted approach to digital marketing has significantly increased our client base and online credibility. The team is responsive, insightful, and deeply invested in our success. We are extremely satisfied with the results and highly recommend them.")
+                +comments("Olivia Brown","Director of Communications at BrightFuture Nonprofit","Our collaboration with Positivus has helped us expand our reach and engage more supporters than ever before. Their expertise in social media and digital campaigns has transformed our online presence. The team is not only skilled but also genuinely passionate about our mission. We wholeheartedly endorse their work!")
+                
+            .tesmonials-arrows 
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="tesmonials-arrows-button tesmonials-arrows-left-button">
+                    <path d="M2 10.5C1.17157 10.5 0.5 11.1716 0.5 12C0.5 12.8284 1.17157 13.5 2 13.5L2 10.5ZM23.0607 13.0607C23.6464 12.4749 23.6464 11.5251 23.0607 10.9393L13.5147 1.3934C12.9289 0.807613 11.9792 0.807613 11.3934 1.3934C10.8076 1.97919 10.8076 2.92893 11.3934 3.51472L19.8787 12L11.3934 20.4853C10.8076 21.0711 10.8076 22.0208 11.3934 22.6066C11.9792 23.1924 12.9289 23.1924 13.5147 22.6066L23.0607 13.0607ZM2 13.5L22 13.5L22 10.5L2 10.5L2 13.5Z" fill="white"/>
+                </svg>
+
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="tesmonials-arrows-button tesmonials-arrows-right-button">
+                    <path d="M2 10.5C1.17157 10.5 0.5 11.1716 0.5 12C0.5 12.8284 1.17157 13.5 2 13.5L2 10.5ZM23.0607 13.0607C23.6464 12.4749 23.6464 11.5251 23.0607 10.9393L13.5147 1.3934C12.9289 0.807613 11.9792 0.807613 11.3934 1.3934C10.8076 1.97919 10.8076 2.92893 11.3934 3.51472L19.8787 12L11.3934 20.4853C10.8076 21.0711 10.8076 22.0208 11.3934 22.6066C11.9792 23.1924 12.9289 23.1924 13.5147 22.6066L23.0607 13.0607ZM2 13.5L22 13.5L22 10.5L2 10.5L2 13.5Z" fill="white"/>
+                </svg>
+
