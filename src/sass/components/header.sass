@@ -4,13 +4,24 @@
     +media(768)
         padding-top: 60px
     &-menu  
+        position: fixed
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        /* backdrop-filter: blur(10px) */
+        /* background-color: rgba(255, 255, 255, 0.9) */
+        background: #fff
+        z-index: 1000
+        padding: 10px 5px !important
+        /* box-sizing: border-box */
         +flex("space-between","center","wrap")
             gap: 20px
         +media(450)
             gap: 40px
-        margin-bottom: 70px
+        /* margin-bottom: 70px */
+        transition: .5s
         &-burger-menu
-            
+            padding-right: 5px
             &__content
                 display: none
                 position: relative
@@ -37,6 +48,7 @@
             svg
                 width: 45px
                 height: 45px
+                padding-right: 5px
         
         &-content
             +flex("space-between","center","wrap")
@@ -77,6 +89,7 @@
                 background-position: 100% 0
                 color: $header-button-hover-text-color
     &-main
+        padding: 50px 0 0 0 
         +flex("space-between","start","wrap")
             gap: 20px
         +media(768)
@@ -132,6 +145,9 @@
 .logo 
     display: flex
     align-items: center
+    padding-left: 5px
+    +media(425)
+        padding-left: 0px
     &-img 
         width: 100%
         height: 100%

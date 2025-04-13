@@ -7,16 +7,29 @@ html
         font-size: 1px
 body
     font-size: 14rem
-    font-family: "Space Grotesk", serif
+    font-family: "Space Grotesk", Arial, Helvetica, sans-serif,serif
 *
     padding: 0
     margin: 0
-    
-.wrapper
+input[type="text"],input[type="email"],input[type="password"],textarea
+    box-sizing: border-box
+    outline: none
+input[type="radio"]
+    cursor: pointer
+    outline: none
+.wrapper,.header-menu
     width: auto
     padding: 0 5px
-    +media(420)
+    +media(425)
         padding: 0px 10px
+    +media(655)
+        width: 85%
+        /*  text-align: center*/
+        margin: auto
+        padding: 0
+.header-menu
+    width: 100%
+    
     +media(655)
         width: 85%
         /*  text-align: center*/
@@ -27,6 +40,9 @@ a
     text-decoration: none
 .link:hover
     border-bottom: 1px solid #000
+
+.hide-header
+    transform: translate(-50%,-100px) !important
 .db
     display: block !important
 .dib
@@ -49,7 +65,7 @@ a
     padding: 20px 0
     text-align: center
     width: 100%
-    +media(420)
+    +media(425)
         padding: 20px 35px
         width: auto
     color: $header-button-hover-text-color
@@ -188,7 +204,7 @@ a
     width: 100%
     background-color: $grey
     padding: 25px
-    +media(420)
+    +media(425)
         padding: 50px
     border-radius: 45px
     box-sizing: border-box
@@ -236,7 +252,7 @@ a
     +flex("space-between","center")
     position: relative
     width: auto
-    margin: 0 -10px 0 -10px
+    margin: 0 -5px 0 -5px
     +media(425)
         margin: 0
         width: 100%
@@ -419,13 +435,14 @@ a
     height: 150px
     background-size: cover
 .tesmonials
+    margin-bottom: 120px
     &-comments
         background-color: $button-bg
         padding: 60px 0 40px 0
         /* border-radius: 20px */
         +media(375)
             border-radius: 45px
-        margin: 0 -10px 0 -10px
+        margin: 0 -5px 0 -5px
         +media(425)
             margin: 0
         &-items
@@ -508,4 +525,118 @@ a
         &-left-button
             filter: brightness(100%)
             transform: rotate(180deg)
+.contact-us 
+    & form
+        display: flex
+        flex-direction: column
+        gap: 40px
+        width: 100%
+        +media(640)
+            width: 500px
+        z-index: 2
+        & .contact-us-input-text,input[type="submit"],.contact-us-textarea
+            +media(640)
+                max-width: 556px
+        & .contact-us-input-text,.contact-us-textarea
+            padding-top: 35px
+        & .contact-us-input-text
+            position: relative
+            & input 
+                width: 100%
+                padding: 18px 30px
+                font-size: 18rem
+                border-radius: 14px
+                border: 1px solid #000
+                
+            & label
+                position: absolute
+                top: 0
+                font-size: 16rem
+                left: 0
+    &-textarea
+        position: relative
+        & textarea 
+            width: 100%
+            min-height: 100px
+            height: 190px
+            
+            padding: 18px 30px
+            font-size: 18rem
+            border-radius: 14px
+            border: 1px solid #000
+            resize: vertical
+            &::placeholder
+                font-family: "Space Grotesk", Arial, Helvetica, sans-serif,serif
+                
+        & label
+            position: absolute
+            left: 0
+            font-size: 16rem
+            top: 0
+    &-form
+        display: flex
+        position: relative
+        justify-content: center
+        align-items: center
+        padding: 60px 5px
+        +media(425)
+            padding: 60px 20px
+        +media(640)
+            padding: 60px 0px 80px 0
+        +media(768)
+            justify-content: space-between
+            padding: 60px 0px 80px 100px
+        background-color: $grey
+        border-radius: 15px
+        +media(425)
+            border-radius: 45px
+        & input[type="submit"]
+            cursor: pointer
+        &-radio
+            display: flex
+            align-items: center
+            & input[type="radio"]
+                position: relative
+                appearance: none
+                border: 1px solid #000
+                background-color: #fff
+                width: 28px
+                height: 28px
+                border-radius: 100%
+                margin-right: 15px
+                &::before
+                    content: ""
+                    position: absolute
+                    width: 15px
+                    height: 15px
+                    background-color: #fff
+                    border-radius: 100%
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%,-50%)
+                &:checked::before
+                    background-color: $green
+            & label
+                font-size: 18rem
+                &[for="contact-us-radio1"]
+                    margin-right: 35px
+        &-main-inputs
+            display: flex
+            flex-direction: column
+            gap: 45px
+.form-pic
+
+    position: absolute
+    top: 50%
+    right: 0
+    transform: translateY(-50%)
+    z-index: 0
+    +media(768)
+        position: static
+        transform: translateY(0)
+    background-image: url(../img/form_pic.png)
+    width: 240px
+    +media(1024)
+        width: 368px
+    height: 649px
 @import components/footer

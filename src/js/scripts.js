@@ -98,3 +98,24 @@ document.querySelectorAll(".tesmonials-arrows-button").forEach((button)=>{
         }
     })
 })
+const headerMenu = document.querySelector(".header-menu")
+let startScroll = 0
+let scrollTimeout
+
+window.addEventListener("scroll", ()=>{
+    const currentScroll = window.scrollY;
+    clearTimeout(scrollTimeout)
+    if (startScroll>currentScroll){
+        headerMenu.classList.add("hide-header")
+        scrollTimeout = setTimeout(()=>{
+            headerMenu.classList.remove("hide-header")
+        }, 200)
+    }
+    if(startScroll<currentScroll){
+        headerMenu.classList.remove("hide-header")
+    }
+    if(currentScroll == 0){
+        headerMenu.classList.remove("hide-header")
+    }
+    startScroll = currentScroll <= 0 ? 0 : currentScroll
+})
