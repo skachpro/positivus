@@ -1,4 +1,32 @@
 //- Footer for all pages
 include ../helpers/mixins
 footer.footer
-    //-footer
+    .footer-content 
+        .footer-menu 
+            img.footer-logo(src="img/logo_white.svg", alt="Footer Logo")
+            nav.footer-navigation
+                a.footer-navigation-link(href="#") About us
+                a.footer-navigation-link(href="#") Services
+                a.footer-navigation-link(href="#") Use Cases
+                a.footer-navigation-link(href="#") Pricing
+                a.footer-navigation-link(href="#") Blog
+            .footer-socials 
+                a(href="#")
+                    img(src="img/in.png", alt="")
+                a(href="#")
+                    img(src="img/facebook.png", alt="")
+                a(href="#")
+                    img(src="img/tw.png", alt="")
+        .footer-content-content
+            .footer-contacts 
+                h4.footer-contacts-heading Contact us:
+                ul.footer-contacts-list
+                    li.footer-contacts-list-item Email: info@positivus.com
+                    li.footer-contacts-list-item Phone: 555-567-8901
+                    li.footer-contacts-list-item Address: 1234 Main St Moonstone City, Stardust State 12345
+            form.footer-stn(action="index.php", method='POST')  
+                input(type="email", name="footer-email", placeholder="Email")
+                input(type="submit" value="Subscribe to news")
+        hr
+        p.copy &copy; 2023 Positivus. All Rights Reserved.
+        a.p-p(href="#") Privacy Policy

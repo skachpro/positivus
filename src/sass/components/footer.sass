@@ -1,0 +1,87 @@
+@import helpers/vars
+@import helpers/mixins
+.footer
+    background-color: $button-bg
+    border-radius: 45px 45px 0 0
+    padding: 55px 60px 60px 50px
+    &-content
+        &-content
+            display: flex
+            justify-content: space-between
+            align-items: center
+            flex-wrap: wrap
+            margin-bottom: 50px
+    &-menu 
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 65px
+    &-navigation
+        display: flex
+        align-items: center
+        gap: 40px
+        & a 
+            display: flex
+            align-items: center
+            text-decoration: none
+            color: #fff
+            font-size: 18rem
+            &:hover
+                text-decoration: underline
+    &-socials
+        display: flex
+        gap: 20px
+    &-contacts
+        display: inline-block
+        & h4 
+            display: inline-block
+            font-size: 20rem
+            background-color: $green
+            padding: 0 7px
+            margin-bottom: 25px
+            font-weight: 500
+            border-radius: 7px
+        & ul 
+            display: flex
+            flex-direction: column
+            gap: 20px
+            list-style: none
+            max-width: 320px
+            & li 
+                font-size: 18rem
+                color: #fff
+    &-stn 
+        display: flex
+        gap: 20px
+        background-color: #292A32
+        padding: 60px 40px
+        border-radius: 14px
+        & input 
+            appearance: none
+            height: 67px
+            border-radius: 14px
+            padding: 22px 35px
+            outline: none
+            border: none
+        & input[type="email"]
+            border: 1px solid #fff
+            background-color: transparent
+            width: 285px
+            &::placeholder
+                color: #fff
+                font-size: 18rem
+        & input[type="submit"]
+            background-color: $green
+            font-size: 18px
+            cursor: pointer
+hr 
+    margin-bottom: 50px
+.copy
+    display: inline
+    color: #fff
+    font-size: 18rem
+    margin-right: 40px
+.p-p
+    text-decoration: underline
+    color: #fff
+    font-size: 18rem
